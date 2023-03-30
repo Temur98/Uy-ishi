@@ -212,7 +212,7 @@ public class StreamApiTest {
         List<Product> books = productRepo.findAll().stream()
                 .filter(product -> product.getCategory().equalsIgnoreCase("Books"))
                 .collect(Collectors.toList());
-        books.stream().mapToDouble((ToDoubleFunction<? super Product>) books)
+        books.stream().mapToDouble((ToDoubleFunction<? super Product>) books);
 
     }
 
